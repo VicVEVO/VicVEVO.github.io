@@ -1,1 +1,1 @@
-// si besoin
+export const prerender = true;
