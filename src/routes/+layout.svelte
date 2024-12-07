@@ -1,1 +1,3 @@
-<!-- mettre les headers et footers -->
+<main>
+    <slot />
+</main>
