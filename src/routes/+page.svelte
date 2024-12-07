@@ -30,6 +30,7 @@
 	}
 
 	h1 {
+		margin: 0 auto;
 		font-weight: 700;
 		text-align: left;
 		width: 700px;
@@ -46,6 +47,17 @@
 			font-size: 48px;
 		}
 	}
+
+	@media (max-width: 900px) {
+		h1 {
+			margin-left: 0px !important;
+			width: 305px;
+		}
+		main > h1 {
+			font-size: 36px;
+		}
+	}
+
 
 	@media (min-width: 600px) {
 		main {
