@@ -52,7 +52,7 @@
 
 	.button:hover::after {
 		content: '';
-		background: #ca3c25;
+		background: #6cd4cd;
 		display: block;
 		height: 3px;
 		width: 100%;
@@ -62,7 +62,7 @@
 
 	.button.selected:after {
 		content: '';
-		background: #ca3c25;
+		background: #6cd4cd;
 		display: block;
 		height: 3px;
 		width: 100%;

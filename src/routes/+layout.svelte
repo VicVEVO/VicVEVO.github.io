@@ -221,8 +221,8 @@
 	}
 
 	:global(::selection) {
-		color: white;
-		background: #ca3c25;
+		color: black;
+		background: #6cd4cd;
 	}
 
 	:global(::-webkit-scrollbar) {
@@ -271,7 +271,6 @@
 	footer {
 		font-size: 16px;
 		font-weight: 400;
-		padding: 30px 0;
 		max-width: 900px;
 		text-align: center;
 		width: 100%;
@@ -298,17 +297,18 @@
 		display: flex;
 		justify-content: space-between;
 		max-width: 200px;
-		margin: 50px auto 0;
+		margin: 0px auto 0;
 	}
 
 	.icon {
 		cursor: pointer;
-		transition: color 0.2s ease-in-out;
+		transition: color 0.5s ease;
 		width: 40px;
 	}
 	.icon:hover {
-		color: #ca3c25;
+		color: #6cd4cd;
 	}
+	
 	.button-container {
 		cursor: pointer;
 		height: 40px;
@@ -317,26 +317,32 @@
 		background: linear-gradient(155deg, rgba(114, 114, 114, 0.15), transparent);
 		margin: auto;
 		background-size: 150% 150%;
-
 		display: flex;
-		justify-content: center; 
+		justify-content: center;
 		align-items: center;
 		font-weight: 500;
+		position: relative;
+		overflow: hidden;
 	}
 
 	.button-container:hover {
-		animation: gradient 2s ease infinite;
+	animation: shine 2s linear infinite;
 	}
 
-	@keyframes gradient {
-		0% {
-			background-color: linear-gradient(155deg, rgba(114, 114, 114, 0.15), transparent);
-		}
-		50% {
-			background-color: #2b2b2b;
-		}
-		100% {
-			background-color: linear-gradient(155deg, rgba(114, 114, 114, 0.15), transparent);
-		}
-	}
+/* Définition de l'animation de type "shine" */
+@keyframes shine {
+  0% {
+    background-position: 200% 0; /* Position du dégradé à l'état initial */
+  }
+  100% {
+    background-position: -200% 0; /* Déplace le dégradé d'un côté à l'autre */
+  }
+}
+
+/* Le bouton sous le survol aura un fond linéaire animé */
+.button-container:hover {
+  background: linear-gradient(110deg, rgba(114, 114, 114, 0.15) 45%, rgba(255, 255, 255, 0.15)55%,rgba(114, 114, 114, 0.15)); 
+  background-size: 200% 100%; /* Agrandissement du fond pour effet animé */
+}
+
 </style>

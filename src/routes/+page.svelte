@@ -1,8 +1,18 @@
+<script>
+	import { animateTyping } from './bruh'
+</script>
+
+
 <svelte:head>
 	<title>Victor Barilly - Main page</title>
 </svelte:head>
 <main>
-	<h1>Welcome <br /> I'm Victor</h1>
+	<h1> Welcome, <br /> <span use:animateTyping={[
+		"I\'m Victor!",
+		"Here is my Portfolio.",
+		"To my world!"
+	]}></span>
+	</h1>
 </main>
 
 <style>
@@ -21,10 +31,13 @@
 
 	h1 {
 		font-weight: 700;
+		text-align: left;
+		width: 700px;
+		margin-left: -300px !important;
 	}
 
 	main > h1 {
-		margin: 50px 10px 0;
+		margin: -50px 10px 0;
 		font-size: 36px;
 	}
 
