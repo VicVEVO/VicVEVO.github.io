@@ -12,25 +12,24 @@
 	import FaEnvelope from 'svelte-icons/fa/FaEnvelope.svelte';
 	import FaCopy from 'svelte-icons/fa/FaCopy.svelte';
 	import { modalContent, modalOpened } from '$lib/store';
+	import { tsParticles } from "@tsparticles/engine";
+	import { loadStarsPreset } from "@tsparticles/preset-stars";
 
 	onMount(async () => {
-	const { loadStarsPreset } = await import('@tsparticles/preset-stars');
-
 	await loadStarsPreset(tsParticles);
-
 	await tsParticles.load({
-			id: "tsparticles",
-			options: {
-				preset: "stars",
-				particles: {
-					color: {
-						value: ["#6cd4cd", "#ffffff", "#ffffff"]
-					},
-					number: {
-						value: 50,
-					},
-				},
+		id: "tsparticles",
+		options: {
+			preset: "stars",
+			particles: {
+			color: {
+				value: ["#6cd4cd", "#ffffff", "#ffffff"]
 			},
+			number: {
+				value: 50,
+			},
+			},
+		},
 		});
 	});
 
@@ -311,7 +310,7 @@
 	}
 	@media (min-width: 600px) {
 	}
-	
+
 	.icons {
 		display: flex !important;
 		justify-content: center !important;
@@ -348,24 +347,25 @@
 		font-weight: 500;
 		position: relative;
 		overflow: hidden;
+		border: 2px solid transparent;
+		transition: border 0.3s ease;
 	}
 
 	.button-container:hover {
-	animation: shine 2s linear infinite;
+		animation: shine 2s linear infinite;
+		background: linear-gradient(110deg, rgba(114, 114, 114, 0.15) 45%, rgba(255, 255, 255, 0.15) 55%, rgba(114, 114, 114, 0.15)); 
+		background-size: 200% 100%;
+		border: 2px solid rgb(109, 109, 109);
 	}
 
 @keyframes shine {
-  0% {
-    background-position: 200% 0;
-  }
-  100% {
-    background-position: -200% 0;
-  }
+	0% {
+		background-position: 200% 0;
+	}
+	100% {
+		background-position: -200% 0;
+	}
 }
 
-.button-container:hover {
-  background: linear-gradient(110deg, rgba(114, 114, 114, 0.15) 45%, rgba(255, 255, 255, 0.15)55%,rgba(114, 114, 114, 0.15)); 
-  background-size: 200% 100%;
-}
 
 </style>

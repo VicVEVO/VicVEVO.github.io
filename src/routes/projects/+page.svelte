@@ -54,10 +54,6 @@
 		text-align: center;
 	}
 
-	a {
-		text-decoration: none;
-	}
-
 	.projectContainer .projects {
 		display: grid;
 		grid-template-columns: 1fr;
@@ -133,8 +129,27 @@
 		overflow: hidden;
 	}
 
+	.button-container {
+		cursor: pointer;
+		height: 40px;
+		border-radius: 10px;
+		background: linear-gradient(155deg, rgba(114, 114, 114, 0.15), transparent);
+		background-size: 150% 150%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-weight: 500;
+		position: relative;
+		overflow: hidden;
+		border: 2px solid transparent;
+		transition: border 0.3s ease;
+	}
+
 	.button-container:hover {
 		animation: shine 2s linear infinite;
+		background: linear-gradient(110deg, rgba(114, 114, 114, 0.15) 45%, rgba(255, 255, 255, 0.15) 55%, rgba(114, 114, 114, 0.15)); 
+		background-size: 200% 100%;
+		border: 2px solid rgb(42, 42, 42);
 	}
 
 	@keyframes shine {
@@ -144,11 +159,6 @@
 		100% {
 			background-position: -200% 0;
 		}
-	}
-
-	.button-container:hover {
-		background: linear-gradient(110deg, rgba(114, 114, 114, 0.15) 45%, rgba(255, 255, 255, 0.15)55%,rgba(114, 114, 114, 0.15)); 
-		background-size: 200% 100%;
 	}
 
 	@media (min-width: 900px) {
@@ -166,9 +176,6 @@
 
 		.projects .project {
 			min-height: 200px;
-		}
-		.button {
-			max-width: 200px;
 		}
 	}
 
