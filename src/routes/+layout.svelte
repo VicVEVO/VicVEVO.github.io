@@ -13,6 +13,27 @@
 	import FaCopy from 'svelte-icons/fa/FaCopy.svelte';
 	import { modalContent, modalOpened } from '$lib/store';
 
+	onMount(async () => {
+	const { loadStarsPreset } = await import('@tsparticles/preset-stars');
+
+	await loadStarsPreset(tsParticles);
+
+	await tsParticles.load({
+			id: "tsparticles",
+			options: {
+				preset: "stars",
+				particles: {
+					color: {
+						value: ["#6cd4cd", "#ffffff", "#ffffff"]
+					},
+					number: {
+						value: 50,
+					},
+				},
+			},
+		});
+	});
+
 	let copied = false;
 	const cookieEnabled = false;
 	$: showCookieModal = false;
@@ -52,6 +73,8 @@
 </script>
 
 <svelte:body use:cssVariables={{ background: $customBackground }} />
+
+<div id="tsparticles"></div>
 
 <Modal>
 	<div slot="content" class="modalContainer">
@@ -172,6 +195,12 @@
 </footer>
 
 <style>
+
+	#tsparticles {
+		position: fixed;
+		z-index: -1;
+	}
+
 	* {
 		box-sizing: border-box;
 	}
@@ -200,7 +229,6 @@
 		height: 100%;
 		overflow: auto;
 		font-family: 'Fira Code', monospace;
-		background-color: #0a0908;
 	}
 
 	:global(body) {
@@ -221,8 +249,8 @@
 	}
 
 	:global(::selection) {
-		color: white;
-		background: #ca3c25;
+		color: black;
+		background: #6cd4cd;
 	}
 
 	:global(::-webkit-scrollbar) {
@@ -271,7 +299,6 @@
 	footer {
 		font-size: 16px;
 		font-weight: 400;
-		padding: 30px 0;
 		max-width: 900px;
 		text-align: center;
 		width: 100%;
@@ -284,10 +311,7 @@
 	}
 	@media (min-width: 600px) {
 	}
-	a {
-		color: white;
-		text-decoration: none;
-	}
+	
 	.icons {
 		display: flex !important;
 		justify-content: center !important;
@@ -298,17 +322,18 @@
 		display: flex;
 		justify-content: space-between;
 		max-width: 200px;
-		margin: 50px auto 0;
+		margin: 0px auto 0;
 	}
 
 	.icon {
 		cursor: pointer;
-		transition: color 0.2s ease-in-out;
+		transition: color 0.5s ease;
 		width: 40px;
 	}
 	.icon:hover {
-		color: #ca3c25;
+		color: #6cd4cd;
 	}
+	
 	.button-container {
 		cursor: pointer;
 		height: 40px;
@@ -317,26 +342,30 @@
 		background: linear-gradient(155deg, rgba(114, 114, 114, 0.15), transparent);
 		margin: auto;
 		background-size: 150% 150%;
-
 		display: flex;
-		justify-content: center; 
+		justify-content: center;
 		align-items: center;
 		font-weight: 500;
+		position: relative;
+		overflow: hidden;
 	}
 
 	.button-container:hover {
-		animation: gradient 2s ease infinite;
+	animation: shine 2s linear infinite;
 	}
 
-	@keyframes gradient {
-		0% {
-			background-color: linear-gradient(155deg, rgba(114, 114, 114, 0.15), transparent);
-		}
-		50% {
-			background-color: #2b2b2b;
-		}
-		100% {
-			background-color: linear-gradient(155deg, rgba(114, 114, 114, 0.15), transparent);
-		}
-	}
+@keyframes shine {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.button-container:hover {
+  background: linear-gradient(110deg, rgba(114, 114, 114, 0.15) 45%, rgba(255, 255, 255, 0.15)55%,rgba(114, 114, 114, 0.15)); 
+  background-size: 200% 100%;
+}
+
 </style>
