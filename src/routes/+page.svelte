@@ -21,10 +21,9 @@
 		padding: 0;
 		margin: 0 auto;
 		text-align: center;
-
 		display: flex;
 		flex-direction: column;
-		height: calc(100vh - 80px - 88px);
+		height: 80.5vh;
 		justify-content: center;
 		align-items: center;
 	}

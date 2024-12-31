@@ -14,31 +14,38 @@ const projects = [
 		url: 'https://github.com/VicVEVO/Spacesuit-Modeling'
 	},
 	{
-		title: 'Embedded system development of experimental rockets',
-		technologies: ['C++', 'Eigen', 'Matlab', 'python'],
-		description:
-			'Flight computer development with a Kalman filter for an experimental rocket with an optical gyroscope.',
-		url: ''
-	},
-	{
 		title: 'Earth Mesher',
-		technologies: ['C++', 'OpenGL'],
+		technologies: ['C++', 'opengl'],
 		description:
 			'Using satellite data, create a comprehensive 3D visualization of Earth\'s measured characteristics (such as altitude, temperature,..)',
 		url: 'https://github.com/VicVEVO/Earth-Mesher'
 	},
 	{
+		title: 'Embedded system development of experimental rockets',
+		technologies: ['C++', 'eigen', 'matlab', 'python'],
+		description:
+			'Flight computer development with a Kalman filter for an experimental rocket with an optical gyroscope.',
+		url: ''
+	},
+	{
 		title: 'Minishell',
 		technologies: ['C'],
 		description:
-			'Basic implementation of a Unix shell with command execution, redirections, ... ',
+			'Basic implementation of a POSIX shell with command execution, redirections, ... ',
 		url: ''
 	},
 	{
 		title: 'N7 Studio',
-		technologies: ['Java', 'javafx', 'javax.sound'],
+		technologies: ['java', 'javafx', 'javax.sound'],
 		description:
 			'Music composition software developped as a group project for ENSEEIHT.',
+		url: ''
+	},
+	{
+		title: 'Portfolio',
+		technologies: ['svelte', 'typescript'],
+		description:
+			'The lines you are reading are part of this project I developed.',
 		url: ''
 	}
 ];

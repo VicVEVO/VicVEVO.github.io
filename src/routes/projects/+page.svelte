@@ -79,14 +79,12 @@
 		background: #111;
 		padding: 2rem;
 		width: 100%;
-		border-radius: 5px;
 		transition: transform 0.2s ease-in-out;
 		border-radius: 25px;
 	}
 
 	.project p {
-		font-weight: 100;
-		color: #708090;
+		color: #aaaaaa;
 	}
 
 	.projects {
@@ -116,10 +114,8 @@
     .button-container {
 		cursor: pointer;
 		height: 40px;
-		/* max-width: 200px; */
 		border-radius: 10px;
 		background: linear-gradient(155deg, rgba(114, 114, 114, 0.15), transparent);
-		/* margin: auto; */
 		background-size: 150% 150%;
 		display: flex;
 		justify-content: center;
@@ -176,6 +172,20 @@
 
 		.projects .project {
 			min-height: 200px;
+		}
+	}
+
+	@media (max-width: 900px) {
+		.techsContainer {
+			font-size: small;
+		}
+		
+		h2 {
+			font-size: medium;
+		}
+
+		.project p {
+			font-size: small;
 		}
 	}
 

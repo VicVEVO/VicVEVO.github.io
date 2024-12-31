@@ -4,6 +4,9 @@
 	import routes from '$lib/NavRoutes';
 	let opened = false;
 	export let segment: string;
+	const closeNavbar = () => {
+		opened = false;
+	};
 </script>
 
 <div class={opened ? 'NavBar open' : 'NavBar'}>
@@ -17,16 +20,18 @@
 		<div class="buttons">
 			{#each routes as route}
 				<a class={`button ${segment === route.href ? 'selected' : ''}`} href={route.href}
-					>{route.label}</a
-				>
+				on:click={closeNavbar}>
+					{route.label}
+				</a>
 			{/each}
 		</div>
 	</div>
 	<div class="responsiveButtons buttons">
 		{#each routes as route}
 			<a class={`button ${segment === route.href ? 'selected' : ''}`} href={route.href}
-				>{route.label}</a
-			>
+			on:click={closeNavbar}>
+				{route.label}
+			</a>
 		{/each}
 	</div>
 </div>
