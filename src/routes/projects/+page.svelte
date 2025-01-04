@@ -111,20 +111,6 @@
 		margin: 0 0 0 10px;
 	}
 
-    .button-container {
-		cursor: pointer;
-		height: 40px;
-		border-radius: 10px;
-		background: linear-gradient(155deg, rgba(114, 114, 114, 0.15), transparent);
-		background-size: 150% 150%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		font-weight: 500;
-		position: relative;
-		overflow: hidden;
-	}
-
 	.button-container {
 		cursor: pointer;
 		height: 40px;

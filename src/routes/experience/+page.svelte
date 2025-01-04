@@ -183,6 +183,7 @@
   }
   .timeline-content p {
     font-size: small;
+    text-align: justify;
   }
 
   @media (min-width: 900px) {
