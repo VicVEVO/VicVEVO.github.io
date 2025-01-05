@@ -12,25 +12,25 @@
 	<div class="buttons">
 		<div class="button-container">
 			<Button
-				url = ''
+				url = 'assets/PPP.pdf'
 				text = 'PPP Slides 📃'
 			></Button>
 		</div>
 		<div class="button-container">
 			<Button
-				url = ''
+				url = 'assets/example-motivation-letter.pdf'
 				text = 'Cover letter 🧾'
 			></Button>
 		</div>
 		<div class="button-container">
 			<Button
-				url = ''
+				url = 'assets/CV-en.pdf'
 				text = 'English CV 📄'
 			></Button>
 		</div>
 		<div class="button-container">
 			<Button
-				url = ''
+				url = 'assets/CV-frx.pdf'
 				text = 'French CV 📄'
 			></Button>
 		</div>
