@@ -30,7 +30,7 @@
 		</div>
 		<div class="button-container">
 			<Button
-				url = 'assets/CV-frx.pdf'
+				url = 'assets/CV-fr.pdf'
 				text = 'French CV 📄'
 			></Button>
 		</div>
