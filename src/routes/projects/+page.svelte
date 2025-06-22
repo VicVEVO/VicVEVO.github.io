@@ -9,7 +9,7 @@
 
 <div class="projectContainer">
 	<div class="projects">
-		<h1>Some of my Projects</h1>
+		<h1>Some of my Projects (outdated)</h1>
 		{#each projects as project}
 			<div class="project">
 				<div class="header">

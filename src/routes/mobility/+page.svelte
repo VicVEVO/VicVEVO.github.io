@@ -8,7 +8,7 @@
 
 <div class="mobilityContainer">
 	<div class="mobilities">
-		<h1>Mobility</h1>
+		<h1>Mobility (outdated)</h1>
 		{#each mobilities as mobility}
 			<div class="mobility">
 				<img src={mobility.img} alt={mobility.title} class="mobilityImage" />

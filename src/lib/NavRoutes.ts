@@ -14,10 +14,6 @@ const routes = [
 	{
 		href: '/mobility',
 		label: 'Mobility'
-	},
-	{
-		href: '/about',
-		label: 'About'
 	}
 ];
 

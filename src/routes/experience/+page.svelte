@@ -7,8 +7,8 @@
 </svelte:head>
 
 <div class="timeline">
-  <h1>Experience</h1>
-  {#each experiences as project, i}
+  <h1>Experience (outdated)</h1>
+  {#each experiences as experience, i}
     <div class="timeline-item">
       <div
         class="timeline-marker"
@@ -16,17 +16,17 @@
       <div class="timeline-content"
         style="--index: {i + 1}">
           <div class="logo-title-container">
-            {#if project.logo != ''}
-              <img src={project.logo} alt="Project logo" class="project-logo" />
+            {#if experience.logo != ''}
+              <img src={experience.logo} alt="Experience logo" class="experience-logo" />
             {/if}
-            <h3 class="project-title">{project.title}</h3>
+            <h3 class="experience-title">{experience.title}</h3>
           </div>
           <hr>
           <div class="jobtitle-date-container">
-            <p1>{project.jobtitle}</p1>
-            <p2>{project.date}</p2>
+            <p1>{experience.jobtitle}</p1>
+            <p2>{experience.date}</p2>
           </div>
-          <p>{project.description}</p>
+          <p>{experience.description}</p>
       </div>
     </div>
   {/each}
@@ -133,7 +133,7 @@
     animation-delay: calc(0.5s * var(--index));
   }
 
-  .project-title {
+  .experience-title {
     color: #fff;
     animation: titleBlinkColor 4s 1;
     animation-delay: calc(0.5s * var(--index));
@@ -163,7 +163,7 @@
     width: 100%;
   }
 
-  .project-logo {
+  .experience-logo {
     width: 50px;
     margin-bottom: -1rem;
   }
@@ -211,7 +211,7 @@
       font-size: smaller;
     }
 
-    .project-logo {
+    .experience-logo {
       width: 40px;
       margin-bottom: -.5rem;
     }

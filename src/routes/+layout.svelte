@@ -7,6 +7,7 @@
 	import { onMount } from 'svelte';
 	import { customBackground } from '$lib/store';
 	import { Email } from '$lib/Constants';
+	// import FaCV from 'svelte-icons/fa/faBook.svelte';
 	import FaLinkedin from 'svelte-icons/fa/FaLinkedin.svelte';
 	import FaGithub from 'svelte-icons/fa/FaGithub.svelte';
 	import FaEnvelope from 'svelte-icons/fa/FaEnvelope.svelte';
@@ -64,7 +65,7 @@
 		navigator.clipboard.writeText(Email);
 	};
 
-	const openModal = (type: 'email' | 'github' | 'linkedin') => {
+	const openModal = (type: 'email' | 'github' | 'linkedin' | 'cv') => {
 		modalContent.set(type);
 		modalOpened.set(true);
 	};
@@ -131,6 +132,10 @@
 				></Button>
 			</div>
 		{/if}
+
+		<!-- {#if $modalContent === 'cv'}
+			
+		{/if} -->
 	</div>
 </Modal>
 <Navbar segment={$page.url.pathname} />
@@ -139,6 +144,24 @@
 
 <footer>
 	<div class="icons">
+
+		<!-- <div
+			role="button"
+			tabindex="0"
+			on:keypress={() => {
+				modalOpened.set(true);
+				openModal('cv');
+			}}
+			on:click={() => {
+				modalOpened.set(true);
+				openModal('cv');
+			}}
+		>
+			<div class="icon">
+				<FaCV />
+			</div>
+		</div> -->
+
 		<div
 			role="button"
 			tabindex="0"
@@ -190,6 +213,7 @@
 				<FaLinkedin />
 			</div>
 		</div>
+		
 	</div>
 </footer>
 
