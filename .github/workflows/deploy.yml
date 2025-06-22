@@ -8,23 +8,26 @@ jobs:
   build_site:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Set up Node.js
+      - name: Install Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 23
+          node-version: 18
           cache: npm
 
       - name: Install dependencies
         run: npm install
 
-      - name: Build site
-        run: npm run build
+      - name: build
+        env:
+          BASE_PATH: '/VicVEVO.github.io'
+        run: |
+          npm run build
 
       - name: Upload Artifacts
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3
         with:
           path: 'build/'
 
@@ -43,6 +46,4 @@ jobs:
     steps:
       - name: Deploy
         id: deployment
-        uses: actions/deploy-pages@v2
-        with:
-          path: ./build
+        uses: actions/deploy-pages@v4
