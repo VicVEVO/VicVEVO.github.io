@@ -1,18 +1,8 @@
 <script lang="ts">
 	import Navbar from '$lib/components/NavBar.svelte';
-	import Button from '$lib/components/Button.svelte';
-	import Tooltip from '$lib/components/Tooltip.svelte';
 	import { page } from '$app/stores';
-	import Modal from '$lib/components/Modal.svelte';
 	import { onMount } from 'svelte';
 	import { customBackground } from '$lib/store';
-	import { Email } from '$lib/Constants';
-	// import FaCV from 'svelte-icons/fa/faBook.svelte';
-	import FaLinkedin from 'svelte-icons/fa/FaLinkedin.svelte';
-	import FaGithub from 'svelte-icons/fa/FaGithub.svelte';
-	import FaEnvelope from 'svelte-icons/fa/FaEnvelope.svelte';
-	import FaCopy from 'svelte-icons/fa/FaCopy.svelte';
-	import { modalContent, modalOpened } from '$lib/store';
 	import { tsParticles } from "@tsparticles/engine";
 	import { loadStarsPreset } from "@tsparticles/preset-stars";
 
@@ -33,10 +23,6 @@
 		},
 		});
 	});
-
-	let copied = false;
-	const cookieEnabled = false;
-	$: showCookieModal = false;
 
 	interface CssVariables {
 		[name: string]: string;
@@ -61,161 +47,15 @@
 		}
 	};
 
-	const copy = () => {
-		navigator.clipboard.writeText(Email);
-	};
-
-	const openModal = (type: 'email' | 'github' | 'linkedin' | 'cv') => {
-		modalContent.set(type);
-		modalOpened.set(true);
-	};
-
 </script>
 
 <svelte:body use:cssVariables={{ background: $customBackground }} />
 
 <div id="tsparticles"></div>
 
-<Modal>
-	<div slot="content" class="modalContainer">
-		{#if $modalContent === 'email'}
-			<h1>Email:</h1>
-			<div>
-				<p>{Email}</p>
-				&nbsp;
-				<div class="tooltip">
-					<Tooltip tooltip={copied ? 'Copied' : 'Copy'}>
-						<div
-							id="clipboard"
-							role="button"
-							tabindex="0"
-							on:keypress={() => {
-								copied = true;
-								copy();
-								setTimeout(() => {
-									copied = false;
-								}, 500);
-							}}
-							on:click={() => {
-								copied = true;
-								copy();
-								setTimeout(() => {
-									copied = false;
-								}, 500);
-							}}
-						>
-							<div>
-								<FaCopy />
-							</div>
-						</div>
-					</Tooltip>
-				</div>
-			</div>
-		{/if}
-
-		{#if $modalContent === 'github'}
-			<h1>You will be redirected to my GitHub account !</h1>
-			<div class="button-container">
-				<Button
-					url = 'https://github.com/VicVEVO'
-					text = 'continue'
-				></Button>
-			</div>
-		{/if}
-
-		{#if $modalContent === 'linkedin'}
-			<h1>You will be redirected to my Linkedin account !</h1>
-			<div class="button-container">
-				<Button
-					url = 'https://www.linkedin.com/in/victor-barilly-url/'
-					text = 'continue'
-				></Button>
-			</div>
-		{/if}
-
-		<!-- {#if $modalContent === 'cv'}
-			
-		{/if} -->
-	</div>
-</Modal>
 <Navbar segment={$page.url.pathname} />
 
 <slot />
-
-<footer>
-	<div class="icons">
-
-		<!-- <div
-			role="button"
-			tabindex="0"
-			on:keypress={() => {
-				modalOpened.set(true);
-				openModal('cv');
-			}}
-			on:click={() => {
-				modalOpened.set(true);
-				openModal('cv');
-			}}
-		>
-			<div class="icon">
-				<FaCV />
-			</div>
-		</div> -->
-
-		<div
-			role="button"
-			tabindex="0"
-			on:keypress={() => {
-				modalOpened.set(true);
-				openModal('email');
-			}}
-
-			on:click={() => {
-				modalOpened.set(true);
-				openModal('email');
-			}}
-		>
-			<div class="icon">
-				<FaEnvelope />
-			</div>
-		</div>
-
-		<div
-			role="button"
-			tabindex="0"
-			on:keypress={() => {
-				modalOpened.set(true);
-				openModal('github');
-			}}
-			on:click={() => {
-				modalOpened.set(true);
-				openModal('github');
-			}}
-		>
-			<div class="icon">
-				<FaGithub />
-			</div>
-		</div>
-
-		<div
-			role="button"
-			tabindex="0"
-			on:keypress={() => {
-				modalOpened.set(true);
-				openModal('linkedin');
-			}}
-			on:click={() => {
-				modalOpened.set(true);
-				openModal('linkedin');
-			}}
-		>
-			<div class="icon">
-				<FaLinkedin />
-			</div>
-		</div>
-		
-	</div>
-</footer>
 
 <style>
 
@@ -260,9 +100,8 @@
 		color: white;
 		margin: 0;
 		box-sizing: border-box;
-		display: grid;
+		display: block;
 		line-height: 1.75;
-		place-items: center;
 		height: 100%;
 		overflow-x: hidden;
 	}
@@ -306,25 +145,8 @@
 		text-decoration: none;
 	}
 
-	.modalContainer div {
-		display: flex;
-		margin-bottom: 20px;
-	}
-
-	.modalContainer p {
-		margin: 0;
-	}
-
 	:global(.tooltip) {
 		visibility: hidden;
-	}
-
-	footer {
-		font-size: 16px;
-		font-weight: 400;
-		max-width: 900px;
-		text-align: center;
-		width: 100%;
 	}
 
 	@media (min-width: 900px) {
@@ -333,53 +155,6 @@
 		}
 	}
 	@media (min-width: 600px) {
-	}
-
-	.icons {
-		display: flex !important;
-		justify-content: center !important;
-		align-items: center;
-		gap: 20px;
-		cursor: pointer;
-		font-size: 30px;
-		display: flex;
-		justify-content: space-between;
-		max-width: 200px;
-		margin: 0px auto 0;
-	}
-
-	.icon {
-		cursor: pointer;
-		transition: color 0.5s ease;
-		width: 40px;
-	}
-	.icon:hover {
-		color: #6cd4cd;
-	}
-	
-	.button-container {
-		cursor: pointer;
-		height: 40px;
-		max-width: 200px;
-		border-radius: 10px;
-		background: linear-gradient(155deg, rgba(114, 114, 114, 0.15), transparent);
-		margin: auto;
-		background-size: 150% 150%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		font-weight: 500;
-		position: relative;
-		overflow: hidden;
-		border: 2px solid transparent;
-		transition: border 0.3s ease;
-	}
-
-	.button-container:hover {
-		animation: shine 2s linear infinite;
-		background: linear-gradient(110deg, rgba(114, 114, 114, 0.15) 45%, rgba(255, 255, 255, 0.15) 55%, rgba(114, 114, 114, 0.15)); 
-		background-size: 200% 100%;
-		border: 2px solid rgb(109, 109, 109);
 	}
 
 @keyframes shine {

@@ -1,20 +1,5 @@
-const routes = [
-	{
-		href: '/',
-		label: 'Home'
-	},
-	{
-		href: '/projects',
-		label: 'Projects'
-	},
-	{
-		href: '/experience',
-		label: 'Experience'
-	},
-	{
-		href: '/mobility',
-		label: 'Mobility'
-	}
+export default [
+	{ href: '/', key: 'home' },
+	{ href: '/about', key: 'about' },
+	{ href: '/impact', key: 'impact' }
 ];
-
-export default routes;

@@ -1,66 +1,105 @@
-<script>
-	import { animateTyping } from '$lib/TypingEff'
+<script lang="ts">
+	import { lang } from '$lib/store/lang';
+	import { t } from '$lib/i18n';
+	import { Emailto, Linkedin, Youtube, Github } from '$lib/Constants';
 </script>
 
-
 <svelte:head>
-	<title>Victor Barilly - Main page</title>
+	<title>Victor Barilly: Earth Observation Student</title>
 </svelte:head>
-<main>
-	<h1> Welcome, <br /> <span use:animateTyping={[
-		"I\'m Victor!",
-		"Here is my Portfolio.",
-		"To my world!"
-	]}></span>
+
+<main class="hero">
+	<h1>
+		{t[$lang].hi} <span class="highlight">Victor Barilly</span><br />
+		<span class="subtitle">{t[$lang].me}</span>
 	</h1>
+
+	<div class="divider"></div>
+
+	<div class="socials">
+		<a href={Linkedin} target="_blank" aria-label="LinkedIn">
+			<img src="/assets/icons/linkedin.png" alt="LinkedIn" />
+		</a>
+		<a href={Github} target="_blank" aria-label="GitHub">
+			<img src="/assets/icons/github.png" alt="GitHub" />
+		</a>
+		<a href={Youtube} target="_blank" aria-label="GitHub">
+			<img src="/assets/icons/youtube.png" alt="Youtube" />
+		</a>
+		<a href={Emailto} aria-label="Email">
+			<img src="/assets/icons/mail.png" alt="Email" />
+		</a>
+	</div>
 </main>
 
 <style>
-	main {
-		text-align: center;
-		padding: 0;
-		margin: 0 auto;
-		text-align: center;
+	.hero {
+		min-height: 105vh;
 		display: flex;
 		flex-direction: column;
-		height: 80.5vh;
 		justify-content: center;
 		align-items: center;
+		text-align: center;
+		color: white;
 	}
 
 	h1 {
-		margin: 0 auto;
+		font-size: 48px;
 		font-weight: 700;
-		text-align: left;
-		width: 700px;
-		margin-left: -300px !important;
+		margin: 0;
+		line-height: 1.2;
 	}
 
-	main > h1 {
-		margin: -50px 10px 0;
-		font-size: 36px;
+	.highlight {
+		color: #99D4D1;
 	}
 
-	@media (min-width: 900px) {
-		main > h1 {
-			font-size: 48px;
-		}
+	.subtitle {
+		font-size: 32px;
+		font-weight: 400;
+		display: block;
+		margin-top: 10px;
 	}
 
-	@media (max-width: 900px) {
+	.divider {
+		width: 160px;
+		height: 3px;
+		background-color: #99D4D1;
+		margin: 30px 0;
+	}
+
+	.socials {
+		display: flex;
+		gap: 20px;
+	}
+
+	.socials a {
+		display: inline-flex;
+		width: 42px;
+		height: 42px;
+		border-radius: 50%;
+		justify-content: center;
+		align-items: center;
+		transition: background 0.3s, transform 0.3s;
+	}
+
+	.socials a:hover {
+		background: #396F6C;
+		transform: translateY(-3px);
+	}
+
+	.socials img {
+		width: 42px;
+		height: 42px;
+	}
+
+	@media (max-width: 768px) {
 		h1 {
-			margin-left: 0px !important;
-			width: 305px;
-		}
-		main > h1 {
 			font-size: 36px;
 		}
-	}
 
-
-	@media (min-width: 600px) {
-		main {
-			max-width: none;
+		.subtitle {
+			font-size: 24px;
 		}
 	}
 </style>

@@ -62,24 +62,28 @@
 
 	</div>
 </Modal>
-<div class="NavBar">
+
+<div class={opened ? 'NavBar open' : 'NavBar'}>
 	<div class="innerContainer">
 		<a href="/">
 			<img src={Logo} alt="logo" class="logo" />
 			<span class="name">Victor Barilly</span>
 		</a>
-
 		<div class="mobile-actions">
 			<img
 				class="mobile-lang"
-				src={$lang === 'fr' ? '/assets/icons/FRA.png' : '/assets/icons/GBR.png'}
+				src={$lang === 'fr'
+					? '/assets/icons/FRA.png'
+					: '/assets/icons/GBR.png'}
+				alt="Language"
 				on:click={toggleLang}
 			/>
+		
 			<div class="burger">
 				<Burger bind:open={opened} />
 			</div>
 		</div>
-
+		
 		<div class="right">
 			<div class="buttons">
 				{#each routes as route}
@@ -119,18 +123,15 @@
 				</div>
 			</div>
 		</div>
-		
 	</div>
-
-	<!-- MENU MOBILE SÉPARÉ -->
-	<div class={`mobile-menu ${opened ? 'open' : ''}`}>
-		{#each routes as route}
-			<a class={`button ${segment === route.href ? 'selected' : ''}`} href={route.href}
-			on:click={closeNavbar}>
-				{t[$lang][route.key]}
-			</a>
-		{/each}
-
+	{#if opened}
+		<div class="responsiveButtons buttons">
+			{#each routes as route}
+				<a class={`button ${segment === route.href ? 'selected' : ''}`} href={route.href}
+				on:click={closeNavbar}>
+					{t[$lang][route.key]}
+				</a>
+			{/each}
 			<div
 				class="button-container"
 				role="button"
@@ -145,9 +146,9 @@
 				<p>{t[$lang].contact}</p>
 				<slot />
 			</div>
-	</div>
+		</div>
+		{/if}
 </div>
-
 
 <style>
 	:global(.logo) {
@@ -227,10 +228,6 @@
 		bottom: 0;
 	}
 
-	.innerContainer :global(a) {
-		color: white;
-	}
-
 	.button.selected:after {
 		content: '';
 		background: #6cd4cd;
@@ -245,6 +242,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+
 		width: 100%;
 		max-width: 900px;
 		padding: 0 20px;
@@ -253,17 +251,10 @@
 	}
 
 
-	.innerContainer {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-
-		max-width: 900px;
-		margin: 0 auto;
-		padding: 0 20px;
-		height: 80px;
+	.innerContainer :global(a) {
+		height: 30px;
+		color: white;
 	}
-
 
 	.NavBar {
 		position: fixed;
@@ -272,11 +263,19 @@
 		width: 100%;
 		z-index: 20;
 		background: transparent;
+
+		display: flex;
+		justify-content: center;
+
+		padding: 20px 0;
+		height: 80px;
 	}
 
-
 	.right {
-		display: none;
+		display: flex;
+		align-items: center;
+		gap: 32px;
+		margin-left: auto;
 	}
 
 
@@ -304,20 +303,6 @@
 		text-align: center;
 	}
 
-	.mobile-menu .button {
-		padding: 0;
-		cursor: pointer;
-		transition: color 0.2s ease-in-out;
-		text-decoration: none;
-		position: relative;
-		margin: 10px;
-		color: hsl(0 0% 50.2%)
-	}
-
-	.mobile-menu .button.selected {
-		color: white;
-	}
-
 	.buttons .button {
 		padding: 0;
 		cursor: pointer;
@@ -325,12 +310,11 @@
 		text-decoration: none;
 		position: relative;
 		margin: 10px;
-		color: hsl(0 0% 43.14%)
+		color: hsla(0, 0%, 100%, 0.4);
 	}
 
 	.button.selected {
 		color: white;
-		font-weight:bold;
 	}
 
 	.burger :global(button) {
@@ -362,24 +346,6 @@
 		filter: none;
 	}
 
-
-	.mobile-menu {
-		max-height: 0;
-		overflow: hidden;
-
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 24px;
-
-		transition: max-height 0.25s ease;
-	}
-
-	.mobile-menu.open {
-		max-height: 400px;
-	}
-
-
 	.lang-divider {
 		width: 1px;
 		height: 30px;
@@ -409,13 +375,7 @@
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
-		}
-
-		.right {
-			display: flex;
-			align-items: center;
-			gap: 32px;
-			margin-left: auto;
+			/* max-width: 900px; */
 		}
 
 		.buttons {
@@ -428,8 +388,7 @@
 		.responsiveButtons {
 			display: none !important;
 		}
-		.mobile-actions,
-		.mobile-menu {
+		.mobile-actions {
 			display: none;
 		}
 	}

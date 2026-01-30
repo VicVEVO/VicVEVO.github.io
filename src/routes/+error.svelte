@@ -1,5 +1,10 @@
+<script lang="ts">
+	import { lang } from '$lib/store/lang';
+	import { t } from '$lib/i18n';
+</script>
+
 <div class="container">
-	<h1>error 404: the following page does not exist.</h1>
+	<h1>{t[$lang].error}</h1>
 </div>
 
 <style>
