@@ -17,7 +17,7 @@
 
 	h1 {
 		font-weight: 700;
-		margin: 0 0 50px 0;
+		margin: 300px 0 50px 0;
 		font-size: 36px;
 		text-align: start;
 	}

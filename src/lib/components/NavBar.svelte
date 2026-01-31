@@ -8,7 +8,7 @@
 	import FaCopy from 'svelte-icons/fa/FaCopy.svelte';
 	import { lang } from '$lib/store/lang';
 	import { t } from '$lib/i18n';
-	import { modalContent, modalOpened } from '$lib/store';
+	import { modalOpened } from '$lib/store';
 	let opened = false;
 	let copied = false;
 	export let segment: string;
@@ -376,7 +376,7 @@
 	}
 
 	.mobile-menu.open {
-		max-height: 400px;
+		max-height: 300px;
 	}
 
 
@@ -431,6 +431,12 @@
 		.mobile-actions,
 		.mobile-menu {
 			display: none;
+		}
+	}
+
+	@media (max-width: 768px) {
+		.NavBar {
+			background: #000000c9;
 		}
 	}
 </style>

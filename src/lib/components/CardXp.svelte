@@ -228,4 +228,41 @@
 		text-align: justify;
 		max-width: 95%;
 	}
+
+
+	@media (max-width: 768px) {
+		.card-xp {
+			width: 20em;
+			border-radius: 10px;
+  			padding: 7px;
+		}
+
+		.xp-row, .xp-description {
+			font-size: 10px;
+		}
+
+		.xp-content {
+			gap: 5px;
+		}
+
+		.xp-header-text h3 {
+			font-size: 14px;
+		}
+
+		.tag {
+			font-size: 9px;
+			padding: 2px 6px;
+			gap: 4px
+		}
+
+		.tag img {
+			width: 12px;
+			height: 12px;
+		}
+
+		.xp-logo {
+			width: 40px;
+			height: 40px;
+		}
+	}
 </style>

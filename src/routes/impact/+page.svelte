@@ -29,8 +29,10 @@
 
 	<div class="split-section-debut">
 		<div class="image-block">
-			<img src="/assets/docu.jpg" alt="About me" />
-		</div>
+			<a href="https://www.youtube.com/watch?v=ljh7DFxi50k" target="_blank" rel="noopener noreferrer">
+				<img src="/assets/docu.jpg" alt="About me" />
+			</a>
+		</div>		
 		<div class="text-block">
 			<h2>{t[$lang].docu.title}</h2>
 			<div class="section-line"></div>
@@ -51,7 +53,7 @@
 				{t[$lang].docu.desc3}
 			</p>
 		</div>
-		<div class="image-block">
+		<div class="image-block-2">
 			<img src="/assets/ecole-grain2.jpg" alt="About me" />
 		</div>
 	</div>
@@ -178,6 +180,20 @@
 		border-radius: 12px;
 		object-fit: cover;
 		max-height: 576px;
+		transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+	}
+
+	.image-block-2 img {
+		width: 100%;
+		border-radius: 12px;
+		object-fit: cover;
+		max-height: 576px;
+	}
+
+	.image-block img:hover {
+		transform: scale(1.01);
+		filter: brightness(1.15);
+		box-shadow: 0 0px 30px rgba(254 254 254 / 0.26);
 	}
 
 	.utmb img {
@@ -197,6 +213,67 @@
 		object-fit: cover;
 		max-height: 350px;
 		margin-bottom: 30px;
+	}
+
+	@media (max-width: 768px) {
+		.highlight {
+			font-size: 40px;
+		}
+
+		.split-section-debut {
+			display: flex;
+			flex-direction: column;
+			gap: 24px;
+			margin-top: 30px;
+			margin-left: 10px;
+			margin-right: 10px;
+		}
+
+		.split-section-debut .text-block {
+			order: 1;
+		}
+
+		.split-section-debut .image-block {
+			order: 2;
+		}
+
+		.text-block h2 {
+			font-size: 45px;
+		}
+
+		.blic-bloc {
+			margin-left: 10px;
+			margin-right: 10px;
+			font-size: 14px;
+		}
+
+		.split-section {
+			display: flex;
+			flex-direction: column;
+			gap: 24px;
+			margin-top: 0;
+			margin-left: 10px;
+			margin-right: 10px;
+		}
+
+		.split-section .text-block {
+			order: 2;
+		}
+
+		.split-section .image-block-2 {
+			order: 1;
+		}
+
+		.split-section-2 {
+			display: block;
+			margin-top: -30px;
+			margin-left: 10px;
+  			margin-right: 10px;
+		}
+
+		.full-image img {
+			max-height: 123px;
+		}
 	}
 
 </style>

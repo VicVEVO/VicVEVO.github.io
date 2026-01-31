@@ -101,4 +101,10 @@
 		gap: 8px;
 	}
 
+	@media (max-width: 768px) {
+		.card {
+			margin: 0 auto;
+		}
+	}
+
 </style>

@@ -56,13 +56,15 @@ export const t = {
 			desc1: `During my stay in Svalbard, I was  right where the consequences of human activity on the environment are most visible. I decided to share this through a 26-minute documentary film that I wrote and directed during these six months of living and exploring.
 			
 			I chose to make a film that evokes these impacts as they might be seen during a trip: we pay attention to them for a moment, then move on to something else. However, we all have a role to play, and our small actions to reduce our impact also have more impact than we think.`,
-			desc2: `I had the opportunity to organize film screenings at universities, followed by small-talks on topics such as the environment in polar regions and expedition planning, with the aim of bringing to life for the general public what can only be observed from afar in the city. In Svalbard, I also had the opportunity to present at UNIS an expedition I led, including the logistics involved in preparing for it and anecdotes from the several-day trip. I also participated in numerous workshops in Svalbard with the aim of finding ways to raise awareness among locals and tourists about their impact on wildlife and landscapes.`,
-			desc3: 'blabla'
+			desc2: `I had the opportunity to organize film screenings at universities, followed by small-talks on topics such as the environment in polar regions and expedition planning, with the aim of bringing to life for the general public what can only be observed from afar in the city. In Svalbard, I also had the opportunity to present at UNIS an expedition I led, including the logistics involved in preparing for it and anecdotes from the several-day trip. I also participated in numerous workshops with the aim of finding ways to raise awareness among locals and tourists about their impact on wildlife and landscapes in Svalbard.`,
+			desc3: `A screening was also organized in an elementary school to inspire young children with the uniqueness of polar landscapes and animals. Through images, the young students began to realize the importance of preserving these threatened ecosystems.
+
+					This event sparked curiosity while raising awareness of the great fragility of these exceptional natural environments, encouraging reflection on respect for nature from an early age.`
 		},
 
 		sport: {
 			title: "Sport",
-			desc: `blabla`
+			desc: `I train regularly through various sports activities to stay ready for projects that may require a certain level of physical fitness. Trail running is one such activity, and it also provides an opportunity to support charities, such as the fight against cystic fibrosis in the next UTMB race I will be participating in.`
 		},
 
 		card1: {
@@ -104,7 +106,7 @@ export const t = {
 			type: "Work-study contract",
 			duration: "1 year",
 			dates: "September 2025 - September 2026",
-			description: "blabla",
+			description: "Observational data analysis to develop environmental indicators that are understandable to the general public, using a systemic approach to better communicate environmental impact.",
 			logo: "/assets/cnes.png"
 		},
 
@@ -210,13 +212,15 @@ export const t = {
 			desc1: `Lors de mon séjour au Svalbard, j'ai été au coeur de là où l'on observe le plus les conséquences de l'homme sur l'environnement. J'ai décidé de le partager au travers d'un film documentaire de 26 minutes que j'ai écrit et réalisé durant ces 6 mois de vie et d’expéditions.
 
 					J'ai choisi de réaliser un film de sorte à évoquer ces impacts comme on peut les voir lors d'un voyage: on y prête attention un instant, puis on passe à autre chose. Cependant, on a tous un rôle à jouer, et nos petites actions pour diminuer nos impacts, elles aussi, ont plus d'impact qu'on ne le pense.`,
-			desc2: `J'ai eu l'occasion d'organiser des séances de projections en université, suivies de micro-conférences sur, plus généralement, l'environnement dans les régions polaires et la planification d'expéditions dans le but de concrétiser auprès du grand public ce qui est observé de loin depuis la ville. Au Svalbard, j'ai également eu l'occasion de présenter à l'UNIS une expédition que j'ai mené, en incluant notamment l'aspect logistique concernant sa préparation et les anecdotes durant la sortie de plusieurs jours. J'ai également participé à de nombreux ateliers au Svalbard dans le but de trouver des méthodes de sensibilisation vis-à-vis des locaux et touristes.`,
-			desc3: 'blabla'
+			desc2: `J'ai eu l'occasion d'organiser des séances de projections en université, suivies de micro-conférences sur, plus généralement, l'environnement dans les régions polaires et la planification d'expéditions dans le but de concrétiser auprès du grand public ce qui est observé de loin depuis la ville. Au Svalbard, j'ai également eu l'occasion de présenter à l'UNIS une expédition que j'ai mené, en incluant notamment l'aspect logistique concernant sa préparation et les anecdotes durant la sortie de plusieurs jours. J'ai également participé à de nombreux ateliers dans le but de trouver des méthodes de sensibilisation vis-à-vis des locaux et touristes au Svalbard.`,
+			desc3: `Une projection a aussi été organisée dans une école primaire afin d’émerveiller les plus jeunes face à l’unicité des paysages et des animaux des régions polaires. À travers les images, les élèves ont commencé à prendre conscience de l’importance de préserver ces écosystèmes menacés.
+
+					Ce moment a permis de susciter curiosité tout en sensibilisant à la grande fragilité de ces milieux naturels exceptionnels, en encourageant une réflexion sur le respect de la nature dès le plus jeune âge.`
 		},
 
 		sport: {
 			title: "Sport",
-			desc: `blabla`
+			desc: `Je m’entraîne régulièrement à travers différentes activités sportives afin de rester prêt en cas de projets pouvant demander une certaine rigueur physique. La course trail en fait notamment partie et constitue également une occasion de soutenir des associations, par exemple en faveur de la lutte contre la mucoviscidose lors la prochaine course UTMB à laquelle je participerai.`
 		},
 
 		card1: {
@@ -258,7 +262,7 @@ export const t = {
 			type: "Contract pro. M2",
 			duration: "1 an",
 			dates: "Septembre 2025 - Septembre 2026",
-			description: "blabla",
+			description: "Analyse de données d’observations afin de concevoir des indicateurs environnementaux compréhensibles par le grand public, en s’appuyant sur une approche systémique pour mieux communiquer l’impact environnemental.",
 			logo: "/assets/cnes.png"
 		},
 

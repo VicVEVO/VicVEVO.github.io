@@ -116,7 +116,7 @@
 		</div>
 
 		<div class="split-section">
-			<div class="image-block">
+			<div class="image-block-2">
 				<img src="/assets/next-step.jpg" alt="About me" />
 			</div>
 			<div class="text-block">
@@ -511,6 +511,13 @@
 		max-height: 576px;
 	}
 
+	.image-block-2 img {
+		width: 100%;
+		border-radius: 12px;
+		object-fit: cover;
+		max-height: 576px;
+	}
+
 	.full-image {
 		width: 100%;
 		display: flex;
@@ -673,6 +680,164 @@
 	.experience-item:nth-child(even) .card {
 		grid-column: 3;
 		justify-self: start;
+	}
+
+	@media (max-width: 768px) {
+		.split-section {
+			display:block;
+			margin-top: 30px;
+			margin-left: 1em;
+    		margin-right: 1em;
+		}
+
+		.split-section-2 {
+			display:block;
+			margin-top: 30px;
+			margin-left: 1em;
+    		margin-right: 1em;
+		}
+
+		.image-block {
+			width: 50%;
+			margin-left: 25%;
+		}
+
+		.image-block-2 {
+			width: 80%;
+			margin-left: 10%;
+		}
+
+		.full-image {
+			max-height: 200px;
+		}
+
+		.timeline-layout {
+			display:block;
+			margin-top: 0;
+			margin-left: 0;
+    		margin-right: 0;
+		}
+
+		.timeline-cards {
+			display: contents;
+		}
+
+		.timeline-vertical-line-1, .timeline-vertical-line-2, .left-arrow, .timeline-horizontal-line{
+			display: none;
+
+		}
+
+		.timeline-item {
+			margin-top: 65px;
+		}
+
+		.timeline-stack {
+			gap: 0;
+			margin-left: 0;
+  			margin-top: 0;
+		}
+
+		.timeline-text-right {
+			margin-left: 10px;
+			margin-right: 10px;
+			font-size: 14px;
+		}
+
+		@media (max-width: 768px) {
+
+			.split-section {
+				display:block;
+				margin-top: 30px;
+				margin-left: 10px;
+				margin-right: 10px;
+			}
+
+			.split-section-2 {
+				display:block;
+				margin-top: 30px;
+				margin-left: 10px;
+				margin-right: 10px;
+			}
+
+			.image-block {
+				width: 50%;
+				margin-left: 25%; 
+			}
+			
+			.image-block-2 {
+				width: 80%;
+				margin-left: 10%;
+			}
+
+			.full-image {
+				max-height: 200px;
+			}
+
+			.timeline-layout {
+				display:block;
+				margin-top: 0;
+				margin-left: 0;
+				margin-right: 0;
+			}
+
+			.timeline-cards {
+				display: contents;
+			}
+
+			.timeline-vertical-line-1, .timeline-vertical-line-2, .left-arrow, .timeline-horizontal-line{
+				display: none;
+			}
+
+			.timeline-item {
+				margin-top: 65px;
+			}
+
+			.timeline-stack {
+				gap: 0; margin-left: 0; margin-top: 0;
+			}
+
+			.timeline-text-right {
+				margin-left: 10px; margin-right: 10px; font-size: 14px;
+			}
+
+			.experience-timeline {
+				gap: 22px;
+				margin: 22px auto;
+			}
+
+			.experience-item {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 14px;
+			}
+
+			.dot-wrapper {
+				position: static;
+				transform: none;
+				order: 0;
+			}
+
+			.dot-wrapper img {
+				width: 14px;
+				height: 14px;
+			}
+
+			.card {
+				order: 1;
+				width: 100%;
+				display: flex;
+				justify-content: center;
+			}
+
+			.card.left,
+			.experience-item:nth-child(even) .card {
+				grid-column: auto;
+				justify-self: center;
+			}
+
+		}
+
 	}
 
 </style>
