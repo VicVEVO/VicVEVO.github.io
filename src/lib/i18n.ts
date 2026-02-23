@@ -13,9 +13,9 @@ export const t = {
 
 		aboutdesc: {
 			title: "MORE ABOUT ME",
-			desc: `I am an engineering student with a particular interest in the study of extreme environments and their specific engineering challenges. Initially studying in the Mathematics and Computer Science department at my university, I specialized in imaging and modeling for data analysis.
+			desc: `I am an engineering student with a particular interest in the study of environment and its specific engineering challenges. Initially studying in the Mathematics and Computer Science department at my university, I specialized in data analysis and modeling for Earth Observation.
 
-				During my studies, I chose to do an exchange at the northernmost university in the world. For six months, I was a student at the University Center in Svalbard, an experience that reinforced my fascination with polar environments and my involvement in workshops and conferences on the environment.
+				During my studies, I chose to do an exchange at the northernmost university in the world. For six months, I was a student at the University Center in Svalbard, an experience that reinforced my fascination with polar environments and my involvement in workshops and conferences on environment monitoring.
 
 				I am also involved in community service, having served as president of an association dedicated to student space projects. This experience has allowed me to develop a strong taste for teamwork, as well as for presenting projects and results.
 
@@ -48,7 +48,7 @@ export const t = {
 			title: "Next Step",
 			desc: `What about now?
 			
-			I would like to contribute to research by closely linking it to fieldwork, while maintaining an environmental mediation dimension. With this in mind, I would like to take part in collective projects that bring together these different aspects.`
+			I aspire to contribute to environmental research by bridging large-scale Earth Observation monitoring with field-based investigations, while maintaining an environmental mediation dimension. With this in mind, I would like to take part in collective projects that bring together these different aspects.`
 		},
 
 		docu: {
@@ -204,7 +204,7 @@ export const t = {
 			title: "L'étape suivante",
 			desc: `Et maintenant ?
 			
-					J’aimerais apporter ma pierre à l’édifice de la recherche en la reliant étroitement au travail de terrain, tout en conservant une dimension de médiation environnementale. Dans cette optique, je souhaite prendre part à des projets collectifs articulant ces différents volets.`
+					Je souhaite contribuer à la recherche environnementale en établissant un lien entre la surveillance à grande échelle par observation de la Terre et les investigations sur le terrain, tout en conservant une dimension de médiation environnementale. Dans cette optique, je souhaite participer à des projets collectifs qui réunissent ces différents aspects.`
 		},
 
 		docu: {
