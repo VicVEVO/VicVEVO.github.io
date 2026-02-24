@@ -64,7 +64,7 @@ export const t = {
 
 		sport: {
 			title: "Sport",
-			desc: `I train regularly through various sports activities to stay ready for projects that may require a certain level of physical fitness. Trail running is one such activity, and it also provides an opportunity to support charities, such as the fight against cystic fibrosis in the next UTMB race I will be participating in.`
+			desc: `I am also very committed to outdoor sports activities, especially when they allow me to spend time close to nature. Trail running is one such activity, and it also provides an opportunity to support charities, such as the fight against cystic fibrosis in the next UTMB race I will be participating in.`
 		},
 
 		card1: {
@@ -220,7 +220,7 @@ export const t = {
 
 		sport: {
 			title: "Sport",
-			desc: `Je m’entraîne régulièrement à travers différentes activités sportives afin de rester prêt en cas de projets pouvant demander une certaine rigueur physique. La course trail en fait notamment partie et constitue également une occasion de soutenir des associations, par exemple en faveur de la lutte contre la mucoviscidose lors la prochaine course UTMB à laquelle je participerai.`
+			desc: `J’aime également beaucoup m’investir dans diverses activités sportives en pleine nature. La course trail en fait notamment partie et constitue également une occasion de soutenir des associations, par exemple en faveur de la lutte contre la mucoviscidose lors la prochaine course UTMB à laquelle je participerai.`
 		},
 
 		card1: {
